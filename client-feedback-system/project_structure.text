@@ -1,0 +1,38 @@
+- admin
+  - class-client-feedback-system-admin.php
+  - css
+    - client-feedback-system-admin.css
+  - index.php
+  - js
+    - client-feedback-system-admin.js
+  - partials
+    - client-feedback-system-admin-display.php
+- client-feedback-system.php
+- includes
+  - class-cfs-client.php
+  - class-cfs-company.php
+  - class-cfs-feedback-collection.php
+  - class-cfs-form-manager.php
+  - class-cfs-landing-pages.php
+  - class-cfs-main-options.php
+  - class-client-feedback-system-activator.php
+  - class-client-feedback-system-deactivator.php
+  - class-client-feedback-system-i18n.php
+  - class-client-feedback-system-loader.php
+  - class-client-feedback-system.php
+  - index.php
+- index.php
+- languages
+  - client-feedback-system.pot
+- LICENSE.txt
+- public
+  - class-client-feedback-system-public.php
+  - css
+    - client-feedback-system-public.css
+  - index.php
+  - js
+    - client-feedback-system-public.js
+  - partials
+    - client-feedback-system-public-display.php
+- README.txt
+- uninstall.php

@@ -1,0 +1,82 @@
+{
+  "title": "Customer Satisfaction",
+  "logo": "https://serviqual.com/images/logo/logo.png",
+  "completedHtml": "<h1>You have {points} Points</h1>\n<h3>Thank you for completing the survey</h3>",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "satisfaction-numeric",
+          "title": "How satisfied are you with our product? (1 Point)",
+          "description": "Numeric rating scale",
+          "validators": [
+            {
+              "type": "expression"
+            }
+          ],
+          "showCommentArea": true,
+          "commentText": "Additional comments (optional, +1 point)",
+          "autoGenerate": false,
+          "rateCount": 10,
+          "rateValues": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "satisfaction-stars",
+          "title": "How satisfied are you with our product? (1 Point)",
+          "description": "Star rating scale",
+          "showCommentArea": true,
+          "commentText": "Additional comments (optional, +1 point)",
+          "rateType": "stars",
+          "rateCount": 10,
+          "rateMax": 10,
+          "displayMode": "buttons"
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "satisfaction-smileys-monochrome",
+          "title": "How satisfied are you with our product? (1 Point)",
+          "description": "Smiley rating with monochrome scale",
+          "showCommentArea": true,
+          "commentText": "Additional comments (optional, +1 point)",
+          "rateType": "smileys",
+          "rateCount": 10,
+          "rateMax": 10,
+          "displayMode": "buttons"
+        }
+      ]
+    }
+  ],
+  "calculatedValues": [
+    {
+      "name": "points",
+      "expression": "iif({satisfaction-numeric} notempty, 1, 0) + iif({satisfaction-stars} notempty, 1, 0) + iif({satisfaction-smileys-monochrome} notempty, 1, 0) + iif({satisfaction-numeric-comment} notempty, 1, 0) + iif({satisfaction-stars-comment} notempty, 1, 0) + iif({satisfaction-smileys-monochrome-comment} notempty, 1, 0)",
+      "includeIntoResult": true
+    }
+  ],
+  "cookieName": "VC7Euw3w",
+  "showQuestionNumbers": "off"
+}

@@ -1,0 +1,135 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+&:root {
+  --primary-color: #3498db;
+  --secondary-color: #f1c40f;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+}
+.wrap {
+  background-color: var(--background-color);
+  padding: 20px;
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  form {
+    margin-bottom: 20px;
+  }
+  select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+  dialog {
+    width: 400px;
+    background-color: var(--background-color);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .close-btn {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--primary-color);
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      /* Add this wrapper element */
+      pointer-events: auto; /* And set pointer-events to auto on this element */
+      padding: 20px;
+    }
+  }
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+}
+.wp-list-table {
+  border-collapse: collapse;
+  width: 100%;
+  th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    background-color: var(--background-color);
+  }
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
